@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(CounterApp());
+void main() => runApp(const CounterApp());
 
 class CounterApp extends StatefulWidget {
+  const CounterApp();
+
   @override
   _CounterAppState createState() => _CounterAppState();
 }
