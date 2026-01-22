@@ -16,7 +16,7 @@ cmake_policy(SET CMP0063 NEW)
 # Load bundled libraries from the lib/ directory relative to the binary.
 set(CMAKE_INSTALL_RPATH "$ORIGIN/lib")
 
-# Root filesystem for cross-building.
+
 if(FLUTTER_TARGET_PLATFORM_SYSROOT)
   set(CMAKE_SYSROOT ${FLUTTER_TARGET_PLATFORM_SYSROOT})
   set(CMAKE_FIND_ROOT_PATH ${CMAKE_SYSROOT})
@@ -26,7 +26,7 @@ if(FLUTTER_TARGET_PLATFORM_SYSROOT)
   set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 endif()
 
-# Define build configuration options.
+
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set(CMAKE_BUILD_TYPE "Debug" CACHE
     STRING "Flutter build mode" FORCE)
